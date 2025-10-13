@@ -1,0 +1,29 @@
+{
+  "centerId": "C",
+  "nodes": [
+    { "id": "C", "title": "Reduction of mortgage lending programs", "level": 0 },
+    { "id": "L1-01", "title": "Decreased availability of mortgage loans", "level": 1, "parentId": "C", "p": 0.8, "i": -3 },
+    { "id": "L2-01", "title": "Increase in renters versus homeowners", "level": 2, "parentId": "L1-01", "p": 0.75, "i": -2 },
+    { "id": "L3-01", "title": "Rising rental prices due to higher demand", "level": 3, "parentId": "L2-01", "p": 0.7, "i": -2 },
+
+    { "id": "L1-02", "title": "Reduction in new residential construction projects", "level": 1, "parentId": "C", "p": 0.65, "i": -2 },
+    { "id": "L2-02", "title": "Decline in construction-sector employment", "level": 2, "parentId": "L1-02", "p": 0.6, "i": -2 },
+    { "id": "L3-02", "title": "Economic slowdown in regions with high construction activity", "level": 3, "parentId": "L2-02", "p": 0.55, "i": -1 },
+
+    { "id": "L1-03", "title": "Tighter mortgage eligibility requirements", "level": 1, "parentId": "C", "p": 0.6, "i": -2 },
+    { "id": "L2-03", "title": "Higher mortgage application rejection rates", "level": 2, "parentId": "L1-03", "p": 0.5, "i": -1 },
+    { "id": "L3-03", "title": "Psychological stress among prospective borrowers", "level": 3, "parentId": "L2-03", "p": 0.5, "i": -1 },
+
+    { "id": "L1-04", "title": "Growing interest in alternative financing models", "level": 1, "parentId": "C", "p": 0.7, "i": 1 },
+    { "id": "L2-04", "title": "Expansion of mutual aid programs and housing cooperatives", "level": 2, "parentId": "L1-04", "p": 0.65, "i": 1 },
+    { "id": "L3-04", "title": "Increase in co-purchases of housing", "level": 3, "parentId": "L2-04", "p": 0.55, "i": 1 },
+
+    { "id": "L1-05", "title": "Reduced bank financing", "level": 1, "parentId": "C", "p": 0.5, "i": -2 },
+    { "id": "L2-05", "title": "Liquidity challenges for developers and housing utilities", "level": 2, "parentId": "L1-05", "p": 0.45, "i": -2 },
+    { "id": "L3-05", "title": "Decline in issued construction permits and licenses", "level": 3, "parentId": "L2-05", "p": 0.4, "i": -1 },
+
+    { "id": "L1-06", "title": "Rising prices for existing real estate", "level": 1, "parentId": "C", "p": 0.6, "i": -2 },
+    { "id": "L2-06", "title": "Housing affordability challenges for young people", "level": 2, "parentId": "L1-06", "p": 0.55, "i": -2 },
+    { "id": "L3-06", "title": "Increased public discontent and protests", "level": 3, "parentId": "L2-06", "p": 0.5, "i": -1 }
+  ]
+}

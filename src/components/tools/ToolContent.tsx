@@ -4,11 +4,12 @@
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from '@/components/LanguageToggle';
-import type { Tool } from '@/lib/tools-data';
+//import type { Tool } from '@/lib/tools-data';
 import { ToolSlug } from '@/lib/translations'; // ← новый импорт
 
 // Импортируем интерактивные компоненты
-import FutureWheelVisual from './FutureWheelVisual';
+import FutureWheelVisual from './future-wheel/FutureWheelVisual';
+
 import HorizontalScanning from './HorizontalScanning';
 
 export default function ToolContent({ toolId, interactive }: { toolId: ToolSlug; interactive: boolean }) {

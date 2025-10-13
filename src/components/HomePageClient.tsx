@@ -8,7 +8,7 @@ import type { Tool } from '@/lib/tools-data';
 import { ToolSlug } from '@/lib/translations';
 
 export default function HomePageClient({ tools }: { tools: Tool[] }) {
-  const { t, tTool } = useLanguage(); // ← вот откуда берётся t и tTool
+  const { t, tTool } = useLanguage();  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,7 +28,30 @@ export default function HomePageClient({ tools }: { tools: Tool[] }) {
             const id = tool.id as ToolSlug;
             return (
               <Link key={id} href={`/tools/${id}`} className="block">
-                <div className="bg-white rounded-lg shadow hover:shadow-md transition-shadow p-6 h-full">
+                <div className="relative bg-white rounded-lg shadow hover:shadow-md transition-shadow p-6 h-full">
+                  {/* Бейдж прогресса в правом верхнем углу */}
+                  {typeof tool.progress === 'number' && (
+                    <div
+                      className="absolute top-3 right-3 select-none"
+                      aria-label={`${tool.progress}% ready`}
+                      title={`${tool.progress}%`}
+                    >
+                      <span
+                        className={[
+                          'inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold',
+                          // мягкая подсветка по уровню готовности (опционально)
+                          tool.progress >= 75
+                            ? 'bg-emerald-100 text-emerald-800'
+                            : tool.progress >= 50
+                            ? 'bg-amber-100 text-amber-800'
+                            : 'bg-slate-100 text-slate-700',
+                        ].join(' ')}
+                      >
+                        {tool.progress}%
+                      </span>
+                    </div>
+                  )}
+
                   <h2 className="text-xl font-semibold text-gray-900">{tTool(id, 'name')}</h2>
                   <p className="mt-2 text-gray-700">{tTool(id, 'shortDesc')}</p>
                   <div className="mt-4">

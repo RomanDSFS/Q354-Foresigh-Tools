@@ -38,7 +38,7 @@ export const translations = {
       'future-wheel': {
         name: 'Колесо будущего',
         shortDesc: 'Визуализация каскадных последствий одного события или тренда.',
-        longDesc: 'Колесо будущего — это инструмент для анализа прямых и косвенных последствий изменения. Центр — исходное событие, первый круг — прямые последствия, второй — вторичные и т.д.',
+        longDesc: 'Колесо будущего — это инструмент для анализа прямых и косвенных последствий изменения. Центр — исходное событие, первый круг (R1) — прямые последствия, второй (R2) — вторичные и т.д.',
       },
       'delphi-method': {
         name: 'Метод Делфи',
@@ -100,7 +100,7 @@ export const translations = {
       'future-wheel': {
         name: 'Future Wheel',
         shortDesc: 'Visualizing the cascading consequences of a single event or trend.',
-        longDesc: 'The Future Wheel is a tool for analyzing direct and indirect consequences of a change. The center is the initial event, the first ring shows direct consequences, the second — secondary effects, and so on.',
+        longDesc: 'The Future Wheel is a tool for analyzing direct and indirect consequences of a change. The center is the initial event, the first ring shows direct consequences (R1), the second (R2) — secondary effects, and so on.',
       },
       'delphi-method': {
         name: 'Delphi Method',
