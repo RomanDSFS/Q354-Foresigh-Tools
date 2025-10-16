@@ -5,8 +5,8 @@ import HomePageClient from '@/components/HomePageClient';
 
 // Метаданные для SEO
 export const metadata = {
-  title: 'Инструменты форсайта',
-  description: 'Интерактивные методы для прогнозирования и подготовки к будущему.',
+  title: 'Foresight Tools',
+  description: 'Interactive methods for forecasting and preparing for the future.',
 };
 
 export default function HomePage() {

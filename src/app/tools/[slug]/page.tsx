@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!toolRu) return {};
 
   return {
-    title: `${toolRu.name} — Инструменты форсайта`,
+    title: `${toolRu.name} — Foresight Tools`,
     description: toolRu.shortDesc,
     // Опционально: добавь альтернативные языки для SEO
     alternates: {

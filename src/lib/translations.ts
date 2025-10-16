@@ -8,22 +8,22 @@ export const translations = {
     tryTool: 'Попробуйте инструмент',
     tip: 'Совет',
     tipText: 'используйте этот инструмент в команде для более глубокого анализа.',
-    backToTools: '← Все инструменты',
-    interactiveLabel: 'Интерактивный',
+    backToTools: 'Все инструменты',
+    interactiveLabel: 'Интерактивный или демо',
     comingSoon: 'Интерактивный инструмент скоро будет доступен!',
 
     tools: {
       'horizontal-scanning': {
-        name: 'Горизонтальное сканирование',
+        name: 'Горизонтальное сканирование и выявление слабых сигналов',
         shortDesc: 'Систематический мониторинг внешней среды для выявления трендов и сигналов изменений.',
-        longDesc: 'Горизонтальное сканирование — это процесс постоянного наблюдения за политическими, экономическими, социальными, технологическими, экологическими и правовыми факторами (PESTEL). Он помогает организациям предвидеть изменения и адаптироваться к ним.',
+        longDesc: 'Горизонтальное сканирование — это процесс постоянного наблюдения за политическими, экономическими, социальными, технологическими, экологическими и правовыми факторами (PESTEL). Он помогает организациям предвидеть изменения и адаптироваться к ним. Слабые сигналы — это ранние признаки будущих изменений.',
         tip: 'Совет',
         tipText: 'используйте этот инструмент в команде для более глубокого анализа.',
       },
       'weak-signals': {
-        name: 'Анализ слабых сигналов и wild cards',
+        name: 'Выявление "диких карт"',
         shortDesc: 'Выявление редких, но потенциально значимых событий, которые могут нарушить прогнозы.',
-        longDesc: 'Слабые сигналы — это ранние признаки будущих изменений, которые легко упустить. Wild cards — маловероятные, но высоковлиятельные события (например, пандемия). Этот инструмент помогает готовиться к неожиданностям.',
+        longDesc: 'Wild cards — маловероятные, но высоковлиятельные события (например, пандемия). Этот инструмент помогает готовиться к неожиданностям.',
       },
       'trend-analysis': {
         name: 'Форсайт-анализ тенденций',
@@ -56,9 +56,9 @@ export const translations = {
         longDesc: 'Экспертные игры позволяют моделировать сложные системы и взаимодействия между участниками. Часто используются в стратегическом планировании и политике.',
       },
       'wild-cards': {
-        name: 'Wild Cards и стресс-тестирование',
+        name: 'Стресс-тестирование',
         shortDesc: 'Подготовка к маловероятным, но катастрофическим событиям.',
-        longDesc: 'Wild cards — это «чёрные лебеди» будущего. Стресс-тестирование помогает проверить устойчивость стратегий к таким шокам.',
+        longDesc: 'Стресс-тестирование помогает проверить устойчивость стратегий к шокам.',
       },
     },
   },
@@ -70,22 +70,22 @@ export const translations = {
     tryTool: 'Try the tool',
     tip: 'Tip',
     tipText: 'use this tool with a team for deeper analysis.',
-    backToTools: '← All Tools',
-    interactiveLabel: 'Interactive',
+    backToTools: 'All Tools',
+    interactiveLabel: 'Interactive or demo',
     comingSoon: 'Interactive tool coming soon!',
 
     tools: {
       'horizontal-scanning': {
-        name: 'Horizon Scanning',
+        name: 'Horizontal scanning and weak signal detection',
         shortDesc: 'Systematic monitoring of the external environment to identify trends and signals of change.',
-        longDesc: 'Horizon scanning is the ongoing process of observing political, economic, social, technological, environmental, and legal (PESTEL) factors. It helps organizations anticipate change and adapt.',
+        longDesc: 'Horizontal scanning is a process of continuously monitoring political, economic, social, technological, environmental, and legal factors (PESTEL). It helps organizations anticipate and adapt to change. Weak signals are early indicators of future change.',
         tip: 'Tip',
         tipText: 'use this tool with a team for deeper analysis.',
       },
       'weak-signals': {
-        name: 'Weak Signals and Wild Cards Analysis',
+        name: ' Wild Cards detection',
         shortDesc: 'Identifying rare but potentially significant events that could disrupt forecasts.',
-        longDesc: 'Weak signals are early indicators of future changes that are easy to miss. Wild cards are low-probability, high-impact events (e.g., a pandemic). This tool helps prepare for surprises.',
+        longDesc: 'Wild cards are low-probability, high-impact events (e.g., a pandemic). This tool helps prepare for surprises.',
       },
       'trend-analysis': {
         name: 'Foresight Trend Analysis',
@@ -118,9 +118,9 @@ export const translations = {
         longDesc: 'Expert games model complex systems and stakeholder interactions. They are commonly used in strategic planning and policy development.',
       },
       'wild-cards': {
-        name: 'Wild Cards and Stress Testing',
+        name: ' Stress Testing',
         shortDesc: 'Preparing for low-probability, high-impact disruptive events.',
-        longDesc: 'Wild cards are “black swans” of the future. Stress testing helps assess the resilience of strategies to such shocks.',
+        longDesc: ' Stress testing helps assess the resilience of strategies to shocks.',
       },
     },
   },

@@ -10,7 +10,7 @@ export type Tool = {
 };
 
 export const tools: Tool[] = [
-  { id: 'horizontal-scanning', interactive: true, progress: 15 },
+  { id: 'horizontal-scanning', interactive: true, progress: 75 },
   { id: 'weak-signals',        interactive: true, progress: 0 },
   { id: 'trend-analysis',      interactive: true, progress: 0 },
   { id: 'scenario-analysis',   interactive: true, progress: 0 },
