@@ -48,7 +48,7 @@ export const translations = {
       'backcasting': {
         name: 'Бэккастинг',
         shortDesc: 'Планирование от желаемого будущего к настоящему.',
-        longDesc: 'В отличие от прогнозирования (от настоящего к будущему), бэккастинг начинается с цели («Каким мы хотим видеть 2040 год?») и определяет шаги, необходимые для её достижения.',
+        longDesc: 'Метод беккастинга предполагает задание желаемого состояния на конечную дату ( например 2035 г.) и определение ключевых промежуточных этапов, которые логически ведут к этой цели, начиная с текущего момента (2025 г.).',
       },
       'expert-games': {
         name: 'Экспертные игры и моделирование',
@@ -110,7 +110,7 @@ export const translations = {
       'backcasting': {
         name: 'Backcasting',
         shortDesc: 'Planning from a desired future back to the present.',
-        longDesc: 'Unlike forecasting (from present to future), backcasting starts with a vision (e.g., “What should 2040 look like?”) and identifies the steps needed to achieve it.',
+        longDesc: 'Backcasting defines a desired future state (e.g., 2035) and works backward to identify key milestones that logically lead to this goal, starting from the present (2025).',
       },
       'expert-games': {
         name: 'Expert Games and Simulation',

@@ -16,7 +16,7 @@ export const tools: Tool[] = [
   { id: 'scenario-analysis',   interactive: true, progress: 0 },
   { id: 'future-wheel',        interactive: true, progress: 80 },
   { id: 'delphi-method',       interactive: true, progress: 0 },
-  { id: 'backcasting',         interactive: true, progress: 0 },
+  { id: 'backcasting',         interactive: true, progress: 80 },
   { id: 'expert-games',        interactive: true, progress: 0 },
   { id: 'wild-cards',          interactive: true, progress: 0 },
 ];

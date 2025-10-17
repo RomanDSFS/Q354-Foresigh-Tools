@@ -22,9 +22,9 @@ export default function HorizonScannerDemo() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Horizon Scanning and Weak Signal Detection Tool</h1>
-      <p className="text-lg text-gray-600 mb-6">
+    <div className="max-w-7xl mx-auto px-4 py-4">
+      {/* <h1 className="text-3xl font-bold text-gray-900 mb-2">Horizon Scanning and Weak Signal Detection Tool</h1> */}
+      <p className="text-lg text-gray-600 mb-4">
         An AI-powered toolkit that periodically (or on-demand) collects political, economic, social, technological, environmental, and legal (PESTEL) factors from open sources, 
         enriches it with natural language processing, stores semantic embeddings in FAISS, 
         and answers questions through a Retrieval-Augmented Generation (RAG) agent (CLI and Streamlit UI).

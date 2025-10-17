@@ -4,13 +4,12 @@
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from '@/components/LanguageToggle';
-//import type { Tool } from '@/lib/tools-data';
 import { ToolSlug } from '@/lib/translations'; // ← новый импорт
 
 // Импортируем интерактивные компоненты
 import FutureWheelVisual from './future-wheel/FutureWheelVisual';
-
 import HorizontalScanning from './HorizontalScanning';
+import BackcastingTool from './BackcastingTool';
 
 export default function ToolContent({ toolId, interactive }: { toolId: ToolSlug; interactive: boolean }) {
   const { t, tTool, lang } = useLanguage();
@@ -21,6 +20,8 @@ export default function ToolContent({ toolId, interactive }: { toolId: ToolSlug;
         return <FutureWheelVisual />;
       case 'horizontal-scanning':
         return <HorizontalScanning />;
+      case 'backcasting':  
+        return <BackcastingTool />;
       default:
         return (
           <div className="bg-blue-50 p-6 rounded-lg text-center">

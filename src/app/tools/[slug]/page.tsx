@@ -4,6 +4,7 @@ import { tools } from '@/lib/tools-data';
 import { translations } from '@/lib/translations'; // ← импортируем переводы
 import ToolContent from '@/components/tools/ToolContent';
 
+
 export async function generateStaticParams() {
   return tools.map((tool) => ({ slug: tool.id }));
 }
