@@ -35,11 +35,11 @@ export async function POST(req: NextRequest) {
     });
 
     const content = completion.choices[0].message.content?.trim() || '{}';
-    let json;
 
+    let json;
     try {
       json = JSON.parse(content);
-    } catch (e) {
+    } catch {
       console.error('Failed to parse AI response:', content);
       return Response.json({ error: 'Invalid AI response' }, { status: 500 });
     }

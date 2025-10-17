@@ -4,6 +4,14 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useState, useEffect } from 'react';
 
+// В начале BackcastingTool.tsx (внутри файла)
+interface GeneratedScenario {
+  goal: string;
+  steps: Array<{
+    year: string;
+    description: string;
+  }>;
+}
 // Типы
 type ViewMode = 'examples' | 'custom';
 
@@ -75,7 +83,7 @@ export default function BackcastingTool() {
     social: false,
   });
   const [customGoal, setCustomGoal] = useState('');
-  const [generatedScenario, setGeneratedScenario] = useState<any>(null);
+  const [generatedScenario, setGeneratedScenario] = useState<GeneratedScenario | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -108,8 +116,12 @@ export default function BackcastingTool() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Unknown error');
       setGeneratedScenario(data);
-    } catch (err: any) {
-      setError(err.message || 'Failed to generate');
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('Failed to generate scenario');
+      }
     } finally {
       setIsLoading(false);
     }
@@ -235,7 +247,7 @@ export default function BackcastingTool() {
                 <strong>{lang === 'ru' ? 'Цель:' : 'Goal:'}</strong> {generatedScenario.goal}
               </p>
               <div className="mt-4 space-y-2">
-                {generatedScenario.steps?.map((step: any, i: number) => (
+                {generatedScenario.steps?.map((step, i) => (
                   <div key={i} className="flex gap-2">
                     <span className="font-mono text-green-700 dark:text-green-300">{step.year}:</span>
                     <span className="text-gray-800 dark:text-gray-200">{step.description}</span>

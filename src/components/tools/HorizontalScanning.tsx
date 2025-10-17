@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HorizonScannerDemo() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -62,7 +63,7 @@ export default function HorizonScannerDemo() {
 
       {/* Screenshot Viewer */}
       <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-        <img
+        <Image
           src={screenshotPaths[activeTab]}
           alt={`${tabs.find(t => t.id === activeTab)?.label} view`}
           className="w-full h-auto"
