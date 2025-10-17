@@ -2,9 +2,6 @@
 import { NextRequest } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 const SYSTEM_PROMPT = `
 You are an expert foresight strategist. Generate a backcasting scenario in JSON format with:
@@ -15,6 +12,9 @@ Respond ONLY with valid JSON. No markdown, no explanation.
 `;
 
 export async function POST(req: NextRequest) {
+  const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
   try {
     const { goal, language } = await req.json();
 
