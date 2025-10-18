@@ -30,11 +30,36 @@ export const translations = {
         shortDesc: 'Изучение текущих и возникающих тенденций для прогнозирования будущего.',
         longDesc: 'Анализ тенденций включает сбор данных, выявление паттернов и оценку их потенциального влияния на будущее. Часто используется в сочетании с другими методами для построения сценариев.',
       },
-      'scenario-analysis': {
-        name: 'Сценарный анализ',
-        shortDesc: 'Разработка альтернативных сценариев будущего на основе ключевых неопределённостей.',
-        longDesc: 'Сценарный анализ помогает организациям подготовиться к разным возможным будущим, а не полагаться на один прогноз. Обычно строятся 2–4 сценария (оптимистичный, пессимистичный, неожиданный и др.).',
+     'scenario-analysis': {
+          name: 'Сценарный анализ',
+          shortDesc: 'Разработка альтернативных сценариев будущего на основе ключевых неопределённостей.',
+          longDesc: 'Сценарный анализ помогает организациям подготовиться к разным возможным будущим, а не полагаться на один прогноз. Обычно строятся 2–4 сценария (оптимистичный, пессимистичный, неожиданный и др.).',
+          githubRepo: 'https://github.com/RomanDSFS/foresight-scenario-analysis',
+          scenarios: {
+              baseline: {
+                  title: 'Базовый сценарий',
+                  description: 'Введение цифрового евро в Еврозоне в 2027. Цифровой евро успешно запускается как безопасная и конфиденциальная валюта, дополняя наличность без значительных потрясений для традиционной банковской системы.',
+                  drivers: ['Сильные гарантии конфиденциальности по стандарту GDPR', 'Эффективные лимиты хранения для предотвращения оттока средств из банков'],
+                  events: ['Беспроблемная интеграция с существующими банковскими приложениями', 'Успешный запуск функции оффлайн-платежей'],
+                  implications: ['Повышение эффективности платежей и финансовой включенности', 'Укрепление денежного суверенитета Еврозоны'],
+              },
+              optimistic: {
+                  title: 'Оптимистичный сценарий',
+                  description: 'Цифровой евро становится программируемой платформой, вызывая волну финтех-инноваций и революционизируя цифровые платежи и смарт-контракты.',
+                  drivers: ['Открытая API-инфраструктура для разработчиков', 'Сильное государственно-частное партнерство в финтехе'],
+                  events: ['Интеграция с DeFi-протоколами для расчетов', 'Массовое внедрение для автоматизированных микроплатежей'],
+                  implications: ['Еврозона становится мировым лидером в цифровых финансах', 'Создание совершенно новых рынков цифровых активов'],
+              },
+              pessimistic: {
+                  title: 'Пессимистичный сценарий',
+                  description: 'Широкомасштабная паника приводит к массовому перетоку депозитов из коммерческих банков в цифровой евро, вызывая кредитный кризис.',
+                  drivers: ['Потеря доверия к коммерческим банкам во время кризиса', 'Отсутствие эффективных лимитов хранения или непривлекательные ставки'],
+                  events: ['Быстрый масштабный отток банковских депозитов', 'Резкое удорожание финансирования для банков'],
+                  implications: ['Сильный кредитный кризис для бизнеса и домохозяйств', 'Вынужденное вмешательство ЕЦБ для поддержки банковской системы'],
+              },
+          },
       },
+
       'future-wheel': {
         name: 'Колесо будущего',
         shortDesc: 'Визуализация каскадных последствий одного события или тренда.',
@@ -93,10 +118,34 @@ export const translations = {
         longDesc: 'Trend analysis involves collecting data, identifying patterns, and assessing their potential future impact. It is often combined with other methods to build scenarios.',
       },
       'scenario-analysis': {
-        name: 'Scenario Analysis',
-        shortDesc: 'Developing alternative future scenarios based on key uncertainties.',
-        longDesc: 'Scenario analysis helps organizations prepare for multiple possible futures rather than relying on a single forecast. Typically, 2–4 scenarios are built (optimistic, pessimistic, disruptive, etc.).',
+          name: 'Scenario Analysis',
+          shortDesc: 'Developing alternative future scenarios based on key uncertainties.',          
+          longDesc: 'Scenario analysis helps organizations prepare for multiple possible futures rather than relying on a single forecast. Typically, 2–4 scenarios are built (optimistic, pessimistic, disruptive, etc.).',          githubRepo: 'https://github.com/RomanDSFS/foresight-scenario-analysis',
+          scenarios: {
+              baseline: {
+                  title: 'Baseline Scenario',
+                  description: ' Digital euro introduced in the EU in 2027. The digital euro successfully launches as a secure and private digital currency, complementing cash without causing significant disruption to the traditional banking system.',
+                  drivers: ['Strong GDPR-level privacy guarantees', 'Effective holding limits to prevent bank disintermediation'],
+                  events: ['Seamless integration with existing banking apps', 'Successful offline functionality rollout'],
+                  implications: ['Increased payment efficiency and financial inclusion', 'Strengthened monetary sovereignty for the Eurozone'],
+              },
+              optimistic: {
+                  title: 'Optimistic Scenario',
+                  description: 'The digital euro becomes a programmable platform, sparking a wave of fintech innovation and revolutionizing digital payments and smart contracts.',
+                  drivers: ['Open API infrastructure for developers', 'Strong public-private partnership in fintech'],
+                  events: ['Integration with DeFi protocols for settlements', 'Mass adoption for automated micropayments'],
+                  implications: ['Eurozone becomes a global leader in digital finance', 'Creation of entirely new digital asset markets'],
+              },
+              pessimistic: {
+                  title: 'Pessimistic Scenario',
+                  description: 'Widespread panic leads to massive shifts of commercial bank deposits into digital euros, triggering a credit crunch and financial instability.',
+                  drivers: ['Loss of confidence in commercial banks during a crisis', 'Absence of effective holding limits or unattractive rates'],
+                  events: ['Rapid large-scale withdrawal of bank deposits', 'Sharp increase in bank funding costs'],
+                  implications: ['Severe credit crunch for businesses and households', 'Forced ECB intervention to support the banking system'],
+              },
+          },
       },
+
       'future-wheel': {
         name: 'Future Wheel',
         shortDesc: 'Visualizing the cascading consequences of a single event or trend.',

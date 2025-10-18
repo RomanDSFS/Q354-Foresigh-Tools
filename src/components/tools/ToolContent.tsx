@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from '@/components/LanguageToggle';
 import { ToolSlug } from '@/lib/translations'; // ← новый импорт
-
 // Импортируем интерактивные компоненты
 import FutureWheelVisual from './future-wheel/FutureWheelVisual';
 import HorizontalScanning from './HorizontalScanning';
 import BackcastingTool from './BackcastingTool';
+import ScenarioAnalysisDemo from './ScenarioAnalysisDemo';
 
 export default function ToolContent({ toolId, interactive }: { toolId: ToolSlug; interactive: boolean }) {
   const { t, tTool, lang } = useLanguage();
@@ -22,6 +22,8 @@ export default function ToolContent({ toolId, interactive }: { toolId: ToolSlug;
         return <HorizontalScanning />;
       case 'backcasting':  
         return <BackcastingTool />;
+         case 'scenario-analysis': // ← добавьте эту строку
+      return <ScenarioAnalysisDemo />;
       default:
         return (
           <div className="bg-blue-50 p-6 rounded-lg text-center">
