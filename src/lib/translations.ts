@@ -13,12 +13,12 @@ export const translations = {
     comingSoon: 'Интерактивный инструмент скоро будет доступен!',
 
     tools: {
-      'horizontal-scanning': {
-        name: 'Горизонтальное сканирование и выявление слабых сигналов',
+      'horizon-scanning': {
+        name: 'Cканирование горизонтов и выявление слабых сигналов',
         shortDesc: 'Систематический мониторинг внешней среды для выявления трендов и сигналов изменений.',
-        longDesc: 'Горизонтальное сканирование — это процесс постоянного наблюдения за политическими, экономическими, социальными, технологическими, экологическими и правовыми факторами (PESTEL). Он помогает организациям предвидеть изменения и адаптироваться к ним. Слабые сигналы — это ранние признаки будущих изменений.',
-        tip: 'Совет',
-        tipText: 'используйте этот инструмент в команде для более глубокого анализа.',
+        longDesc: 'Cканирование горизонтов — это процесс постоянного наблюдения за политическими, экономическими, социальными, технологическими, экологическими и правовыми факторами (PESTEL). Он помогает предвидеть изменения и адаптироваться к ним. Слабые сигналы — это ранние признаки будущих изменений.',
+        //tip: 'Совет',
+        //tipText: 'используйте этот инструмент в команде для более глубокого анализа.',
       },
       'weak-signals': {
         name: 'Выявление "диких карт"',
@@ -100,12 +100,11 @@ export const translations = {
     comingSoon: 'Interactive tool coming soon!',
 
     tools: {
-      'horizontal-scanning': {
-        name: 'Horizontal scanning and weak signal detection',
+      'horizon-scanning': {
+        name: 'Horizon scanning and weak signal detection',
         shortDesc: 'Systematic monitoring of the external environment to identify trends and signals of change.',
-        longDesc: 'Horizontal scanning is a process of continuously monitoring political, economic, social, technological, environmental, and legal factors (PESTEL). It helps organizations anticipate and adapt to change. Weak signals are early indicators of future change.',
-        tip: 'Tip',
-        tipText: 'use this tool with a team for deeper analysis.',
+        longDesc: 'Horizon scanning is a process of continuously monitoring political, economic, social, technological, environmental, and legal factors (PESTEL). It helps anticipate and adapt to change. Weak signals are early indicators of future change.',
+        
       },
       'weak-signals': {
         name: ' Wild Cards detection',

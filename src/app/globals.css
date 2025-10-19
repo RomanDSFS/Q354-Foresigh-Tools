@@ -1,26 +1,167 @@
+/* src/app/globals.css */
 @import "tailwindcss";
 
+/* Базовые CSS-переменные и темы */
 :root {
-  --background: #ffffff;
+  --background: #bb1a1a;
   --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* 👇 новый фон для страницы "Колесо будущего" (переопределяемый) */
+  --fw-page-bg: #064a98;
+
+  /* Можно хранить семейства шрифтов здесь и подключать в Tailwind через theme.extend.fontFamily */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1c0dc4e9;
+    --foreground: #e9dddd;
+    --fw-accent: #194cba;
+    --fw-ring-stroke: #475569;
+    --fw-ring-fill: #1f2937;
+    --fw-node-fill: #0b1730;
+    --fw-node-text: #e5e7eb;
+
+   /* --fw-ring-stroke: #94a3b8;
+    --fw-ring-fill: #e2e8f0;
+    --fw-node-fill: #e0f2fe;
+    --fw-node-text: #0f172a; */
+
+
+    /* тёмный вариант фона страницы future-wheel (при желании подправь) */
+    --fw-page-bg: #ff311bf9;
   }
 }
 
+/* Базовая типографика и фон */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- Helpers: multi-line clamp (без плагинов Tailwind) ---------- */
+.clamp-2 {
+  display: -webkit-box;
+  /* стандартное свойство для совместимости со статическим анализатором */
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamp-3 {
+  display: -webkit-box;
+  /* стандартное свойство для совместимости со статическим анализатором */
+  line-clamp: 3;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* адаптивная площадка под квадратную визуализацию */
+.fw-stage {
+  /* Всегда квадрат 1:1 */
+  aspect-ratio: 1 / 1;
+
+  /* Высота ограничена окном: не меньше 520px, не больше 900px */
+  height: clamp(520px, 78vh, 900px);
+
+  /* На всякий случай растягиваем по ширине контейнера */
+  width: 100%;
+
+  /* Фон полотна по умолчанию прозрачный — чтобы на странице мог быть свой фон */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+/* 👇 тема для страницы future-wheel.
+   Её класс вешаем на корневой div в ToolContent — .future-wheel-theme.
+   Сам фон страницы задаём инлайном через style: background: var(--fw-page-bg). */
+.future-wheel-theme {
+  background: var(--fw-page-bg);
+  min-height: 100vh; /* чтобы фон точно покрывал страницу */
+}
+
+
+
+/* В теме делаем холст «карточкой», чтобы красиво смотрелся на цветном фоне */
+.future-wheel-theme .fw-stage {
+  background: #eee9e9;
+  /* подсветка сайдбара инструмента на тёмном фоне */
+.future-wheel-theme .fw-sidebar {
+  color: #e1e3e9; /* text-gray-200 */
+}
+.future-wheel-theme .fw-sidebar h2,
+.future-wheel-theme .fw-sidebar label,
+.future-wheel-theme .fw-sidebar .fw-note {
+  color: #f3edf2;
+  opacity: 0.9;
+}
+.future-wheel-theme .fw-controls input {
+  background: #0b1730;               /* тёмный, но не чёрный */
+  color: #e5e7eb;
+  border-color: rgba(255,255,255,0.24);
+}
+.future-wheel-theme .fw-controls input::placeholder {
+  color: rgba(229,231,235,0.6);
+}
+.future-wheel-theme .fw-controls .tab {
+  border-color: rgba(255,255,255,0.24);
+  color: #e5e7eb;
+  background: transparent;
+}
+.future-wheel-theme .fw-controls .tab[aria-pressed="true"] {
+  color: #fff;
+}
+
+  border-radius: 16px;
+  border: 1px solid rgba(2, 6, 23, 0.06); /* лёгкая обводка */
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06); /* мягкая тень */
+}
+
+/* Фолбек, если aspect-ratio вдруг не сработает (старые браузеры) */
+.fw-stage.no-ar {
+  position: relative;
+  height: auto;
+  padding-top: 100%;
+}
+.fw-stage.no-ar > .fw-fill {
+  position: absolute;
+  inset: 0;
+}
+
+/* Компактные элементы управления */
+.fw-controls input,
+.fw-controls button {
+  height: 36px;
+}
+.fw-controls .tab {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+}
+
+/* Подпись под колесом — мелкая и плотная */
+.fw-note {
+  font-size: 14px;
+  color: #fdfeff; /* slate-500 */
+}
+
+/* --- ДВУХКОЛОНОЧНЫЙ ЛЕЙАУТ ДЛЯ ИНСТРУМЕНТА --- */
+.fw-layout {
+  display: block;            /* по умолчанию одна колонка на узких экранах */
+  gap: 24px;
+}
+
+@media (min-width: 768px) {   /* начиная с md — две колонки */
+  .fw-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr; /* левый сайдбар фикс., полотно справа */
+    align-items: start;
+    gap: 24px;
+  }
 }
