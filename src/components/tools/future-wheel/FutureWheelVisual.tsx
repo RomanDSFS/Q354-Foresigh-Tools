@@ -273,7 +273,7 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
     <div className="fw-layout w-full" style={workAreaStyle}>
       <aside className="fw-sidebar overflow-auto pr-2">
         {sidebar?.title && (
-          <h2 className="text-xl font-bold text-gray-900 clamp-2">
+          <h2 className="text-xl font-bold text-gray-200 clamp-2">
             {sidebar.title}
           </h2>
         )}
@@ -286,13 +286,13 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
         <div className="fw-controls mt-4">
           <label
             htmlFor="fw-center"
-            className="block text-sm font-semibold mb-1 text-gray-900"
+            className="block text-sm font-semibold mb-1 text-gray-200"
           >
             {t.centralEvent}
           </label>
           <input
             id="fw-center"
-            className="w-full border rounded px-3 h-9 text-gray-900"
+            className="w-full border rounded px-3 h-9 text-gray-400"
             value={centerTitle}
             onChange={(e) => center && updateTitle(center.id, e.target.value)}
             placeholder={lang === 'en' ? 'Type central event' : 'Опишите центральное событие'}

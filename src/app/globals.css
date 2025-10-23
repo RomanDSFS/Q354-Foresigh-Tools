@@ -16,7 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1c0dc4e9;
+    --background: #0e0757;
     --foreground: #e9dddd;
     --fw-accent: #194cba;
     --fw-ring-stroke: #475569;
@@ -31,7 +31,7 @@
 
 
     /* тёмный вариант фона страницы future-wheel (при желании подправь) */
-    --fw-page-bg: #ff311bf9;
+    --fw-page-bg: #0e0474f9;
   }
 }
 

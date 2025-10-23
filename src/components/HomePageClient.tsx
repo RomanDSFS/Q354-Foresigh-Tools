@@ -11,12 +11,12 @@ export default function HomePageClient({ tools }: { tools: Tool[] }) {
   const { t, tTool } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-zian-750">
       {/* Компактная шапка */}
       <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-start">
+        <div className="max-w-7xl mx-auto px-4 py-2 sm:px-6 lg:px-8 flex justify-between items-start">
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-2xl md:text-3xl font-bold text-black leading-tight">
               {t('siteTitle')}
             </h1>
             <p className="mt-1 text-sm md:text-base text-gray-700 leading-snug">

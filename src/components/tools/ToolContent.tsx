@@ -12,8 +12,8 @@ const FutureWheelVisual = dynamic(() => import('./future-wheel/FutureWheelVisual
   ssr: false,
   loading: () => (
     <div className="animate-pulse p-4 border rounded-lg bg-white">
-      <div className="h-5 w-40 bg-gray-200 rounded mb-3" />
-      <div className="h-9 w-full bg-gray-200 rounded mb-3" />
+      <div className="h-5 w-40 bg-gray-500 rounded mb-3" />
+      <div className="h-9 w-full bg-gray-300 rounded mb-3" />
       <div className="h-72 w-full bg-gray-100 rounded" />
     </div>
   ),
@@ -74,11 +74,11 @@ export default function ToolContent({ toolId, interactive }: Props) {
       //style={wrapperStyle}
     >
       {/* Компактная шапка */}
-      <header className={isFutureWheel ? 'bg-blue-100 backdrop-blur border-b' : 'bg-white border-b'}>
+      <header className={isFutureWheel ? 'bg-blue-50 backdrop-blur border-b' : 'bg-white border-b'}>
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-start">
           <div>
-            <Link href="/" className="text-blue-600 font-bold hover:underline">
-              &larr; {t('backToTools')}
+            <Link href="/" className="text-bold text-blue-800 hover:text-blue-500 font-bold">
+              ⬅️ {t('backToTools')}
             </Link>
 
             {/* ТОЛЬКО если НЕ future-wheel — показываем название в хедере */}

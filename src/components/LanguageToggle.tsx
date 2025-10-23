@@ -9,10 +9,10 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={() => setLang(lang === 'ru' ? 'en' : 'ru')}
-      className="text-sm text-gray-600 hover:text-gray-900 underline"
+      className="text-bold text-blue-800 hover:text-blue-500 font-bold underline"
       aria-label={lang === 'ru' ? 'Switch to English' : 'Переключить на русский'}
     >
-      {lang === 'ru' ? 'EN English' : 'RU Русский'}
+      {lang === 'ru' ? 'EN' : 'RU'}
     </button>
   );
 }
