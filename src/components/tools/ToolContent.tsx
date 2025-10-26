@@ -74,7 +74,7 @@ export default function ToolContent({ toolId, interactive }: Props) {
       //style={wrapperStyle}
     >
       {/* Компактная шапка */}
-      <header className={isFutureWheel ? 'bg-blue-50 backdrop-blur border-b' : 'bg-white border-b'}>
+      <header className={isFutureWheel ? 'bg-gray-800 backdrop-blur border-b' : 'bg-gray-800 border-b'}>
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-start">
           <div>
             <Link href="/" className="text-bold text-blue-800 hover:text-blue-500 font-bold">
@@ -85,7 +85,7 @@ export default function ToolContent({ toolId, interactive }: Props) {
             {!isFutureWheel && (
               <h1
                 id="tool-title"
-                className="text-2xl md:text-3xl font-bold text-gray-900 mt-2 leading-tight"
+                className="text-2xl md:text-3xl font-bold text-gray-200 mt-2 leading-tight"
               >
                 {pageTitle}
               </h1>

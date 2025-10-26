@@ -273,12 +273,12 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
     <div className="fw-layout w-full" style={workAreaStyle}>
       <aside className="fw-sidebar overflow-auto pr-2">
         {sidebar?.title && (
-          <h2 className="text-xl font-bold text-gray-200 clamp-2">
+          <h2 className="text-xl font-bold text-gray-500 clamp-2">
             {sidebar.title}
           </h2>
         )}
         {sidebar?.description && (
-          <p className="mt-2 text-sm text-gray-100 leading-relaxed">
+          <p className="mt-2 text-sm text-gray-200 leading-relaxed">
             {sidebar.description}
           </p>
         )}
@@ -292,7 +292,7 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
           </label>
           <input
             id="fw-center"
-            className="w-full border rounded px-3 h-9 text-gray-400"
+            className="w-full border rounded px-3 h-9 italic text-gray-400 text-sm"
             value={centerTitle}
             onChange={(e) => center && updateTitle(center.id, e.target.value)}
             placeholder={lang === 'en' ? 'Type central event' : 'Опишите центральное событие'}
@@ -306,8 +306,8 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
             aria-pressed={view === 'wheel'}
             className={`tab border ${
               view === 'wheel'
-                ? 'bg-blue-600 text-white border-blue-600'
-                : 'bg-white text-gray-700 border-gray-300'
+                ? 'bg-blue-800 text-white border-blue-200'
+                : 'bg-gray-800 text-gray-200 border-gray-200'
             }`}
             onClick={() => setView('wheel')}
           >
@@ -318,8 +318,8 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
             aria-pressed={view === 'network'}
             className={`tab border ${
               view === 'network'
-                ? 'bg-blue-600 text-white border-blue-600'
-                : 'bg-white text-gray-700 border-gray-300'
+                ? 'bg-blue-800 text-white border-blue-200'  // голубой для активной кнопки
+                : 'bg-gray-800 text-gray-200 border-gray-200'
             }`}
             onClick={() => setView('network')}
           >
@@ -327,18 +327,18 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
           </button>
         </div>
 
-        <p className="fw-note mt-3 text-sm text-gray-600">{t.hint}</p>
+        <p className="fw-note mt-3 text-sm text-gray-300">{t.hint}</p>
 
         <div className="mt-3 flex flex-wrap gap-2">
           <button
             type="button"
-            className="h-8 px-3 rounded bg-gray-200 hover:bg-gray-300 text-gray-800 transition text-sm"
+            className="h-8 px-3 rounded bg-gray-700 hover:bg-gray-500 text-gray-200 transition text-sm"
             onClick={onExport}
           >
             {t.export}
           </button>
 
-          <label className="h-8 px-3 rounded bg-gray-200 hover:bg-gray-300 text-gray-800 transition text-sm cursor-pointer inline-flex items-center">
+          <label className="h-8 px-3 rounded bg-gray-700 hover:bg-gray-500 text-gray-200 transition text-sm inline-flex items-center">
             {t.import}
             <input
               type="file"
@@ -350,7 +350,7 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
 
           <button
             type="button"
-            className="h-8 px-3 rounded bg-gray-200 hover:bg-gray-300 text-gray-800 transition text-sm"
+            className="h-8 px-3 rounded bg-gray-700 hover:bg-gray-500 text-gray-200 transition text-sm"
             onClick={onLoadExample}
           >
             {t.tryExample}
@@ -360,7 +360,7 @@ export default function FutureWheelVisual({ sidebar }: { sidebar?: SidebarInfo }
             type="button"
             onClick={generateFromAI}
             disabled={loading}
-            className="h-8 px-3 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 transition text-sm"
+            className="h-8 px-3 rounded bg-blue-800 text-white hover:bg-blue-500 disabled:opacity-50 transition text-sm"
             aria-busy={loading}
           >
             {loading ? t.generating : t.generate}

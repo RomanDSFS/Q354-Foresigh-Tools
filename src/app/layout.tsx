@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Foresight Tools",
-  description: "Interactive methods for forecasting and preparing for the future.",
+  description: "Interactive tools for forecasting and preparing for the future.",
 };
 
 export default function RootLayout({

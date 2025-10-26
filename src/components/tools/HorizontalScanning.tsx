@@ -46,8 +46,8 @@ export default function HorizonScannerDemo() {
       <div className="grid gap-6 lg:gap-8 grid-cols-1 lg:[grid-template-columns:260px_minmax(0,1fr)]">
         {/* ===== Левый сайдбар ===== */}
         <aside className="space-y-4 lg:sticky lg:top-6 h-max">
-          <div className="rounded-xl border border-gray-200 bg-white p-4 dark:bg-gray-800 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Views</h4>
+          <div className="rounded-xl border border-gray-700 bg-gray-800 p-4">
+            <h4 className="font-semibold text-white mb-3">Views</h4>
             <div className="flex flex-col gap-2">
               {tabs.map((tab) => (
                 <button
@@ -56,7 +56,7 @@ export default function HorizonScannerDemo() {
                   className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium ${
                     activeTab === tab.id
                       ? 'bg-blue-600 text-white'
-                      : 'bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100'
+                      : ' bg-gray-700 text-gray-200'
                   }`}
                 >
                   {tab.label}
@@ -69,7 +69,7 @@ export default function HorizonScannerDemo() {
         {/* ===== Правая колонка: скриншоты ===== */}
         <section className="space-y-3">
           {/* Screenshot Viewer */}
-          <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+          <div className="bg-gray-900 border border-gray-700 rounded-lg shadow-sm overflow-hidden">
             <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
               <Image
                 src={screenshotPaths[activeTab]}
