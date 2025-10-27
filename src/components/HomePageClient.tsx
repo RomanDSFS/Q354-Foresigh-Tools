@@ -68,7 +68,7 @@ export default function HomePageClient({ tools }: { tools: Tool[] }) {
 
                   {/* Метка «интерактивный/демо», прижата книзу карточки */}
                   <div className="mt-3 pt-1">
-                    <span className="inline-block px-3 py-1 text-xs md:text-sm font-medium bg-blue-900 text-blue-200 rounded-full">
+                    <span className="inline-block px-3 py-1 text-xs md:text-sm font-medium bg-blue-700 text-blue-200 rounded-full">
                       {tool.interactive ? t('interactiveLabel') : 'Описание'}
                     </span>
                   </div>

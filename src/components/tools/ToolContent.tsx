@@ -77,7 +77,7 @@ export default function ToolContent({ toolId, interactive }: Props) {
       <header className={isFutureWheel ? 'bg-gray-800 backdrop-blur border-b' : 'bg-gray-800 border-b'}>
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-start">
           <div>
-            <Link href="/" className="text-bold text-blue-800 hover:text-blue-500 font-bold">
+            <Link href="/" className="text-bold text-blue-600 hover:text-blue-500 font-bold">
               ⬅️ {t('backToTools')}
             </Link>
 
